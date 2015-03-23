@@ -1,0 +1,48 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@android:id/background">
+        <shape>
+            <gradient
+                    android:startColor="@color/LightGrey"
+                    android:centerColor="@color/White"
+                    android:centerY="0.75"
+                    android:endColor="@color/White"
+                    android:angle="270"
+            />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/CornflowerBlue"
+                    android:centerColor="@color/LightSteelBlue"
+                    android:centerY="0.75" 
+                    android:endColor="@color/SkyBlue"
+                    android:angle="270"
+                />
+            </shape>
+        </clip>
+    </item>
+    
+</layer-list>
+
+<!--     <item 
+         android:drawable="@drawable/bar_right_end"
+         />
+    <item>
+         <bitmap 
+             android:src="@drawable/bar_right_end" 
+             android:gravity="right|fill_vertical"
+             android:tileMode="disabled"
+          />
+    </item> 
+    
+     <item>
+<nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/bar_right_end"
+    android:dither="false" />
+    </item> 
+    
+          -->
+
+                    <!--   android:startColor="#00ff00" -->

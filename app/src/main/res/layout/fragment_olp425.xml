@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/LightGrey"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+     <TextView
+     	android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:text="@string/strOLP425Specific"
+     	android:textStyle="bold" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strTemperature"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        
+        <TextView android:id="@+id/temperature"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/strNoDataAvailable"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strRSSI"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        
+        <TextView android:id="@+id/rssi"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/strNoDataAvailable"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strBatteryLevel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        
+        <TextView android:id="@+id/battery_level"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/strNoDataAvailable"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strAccelerometerRange"            
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        
+        <TextView android:id="@+id/btnCancel"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/strNoDataAvailable"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="6dp"
+        android:clipToPadding="false"
+        android:padding="2dp"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/strAccX"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_acc_x"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:paddingRight="10dp"
+                android:progress="127"
+        		android:progressDrawable="@drawable/progress_bar" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/strAccY"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_acc_y"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:paddingRight="10dp"
+                android:progress="127"
+                android:progressDrawable="@drawable/progress_bar" />
+
+            </TableRow>
+        
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/strAccZ"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_acc_z"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:paddingRight="10dp"
+                android:progress="127"
+        		android:progressDrawable="@drawable/progress_bar" />
+
+            </TableRow>
+    </TableLayout>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_margin="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:layout_weight="1"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical" >
+            
+	    	<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/strGreenLED"
+	        android:textSize="18sp"
+	        android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/greenled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:text=""
+            android:textStyle="bold" />
+	</LinearLayout>
+        
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:layout_weight="1"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical" >
+        
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/strRedLED"
+	        android:textSize="18sp"
+	        android:textStyle="bold" />
+    
+        <Switch
+            android:id="@+id/redled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:text=""
+            android:textStyle="bold" />
+	</LinearLayout>
+        
+</LinearLayout>
+</LinearLayout>

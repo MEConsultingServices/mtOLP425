@@ -1,0 +1,75 @@
+
+<resources>
+
+    <string name="app_name">mtOLP425</string>
+
+    <!-- Info screen -->
+    <string name="strCopyright">Copyright miThings.se 2013.\nDeveloped by F Nilsask\nand K Mårtensson for\nconnectBlue\'s account.\nVerCode:x\nVerName:y</string>
+    <string name="strOK">OK</string>
+        
+    <!-- Menu items -->
+    <string name="strSettings">Settings</string>
+    <string name="strSettingsInfo">Currently no settings are implemented</string>
+    <string name="strAbout">About</string>
+    <string name="strConnect">Connect</string>
+    <string name="strDisconnect">Disconnect</string>
+    <string name="strScan">Scan</string>
+    <string name="strStop">Stop</string>
+
+    <!-- Tab texts -->    
+    <string name="strScanTab">\u0020Scan</string>
+    <string name="strServicesTab">\u0020Services</string>
+    <string name="strOLP425Tab">\u0020OLP425</string>
+    <string name="strChatTab">\u0020Chat</string>
+    <string name="strMainAppTab">\u0020MainApp</string>
+
+    <!-- Status texts -->    
+    <string name="strNoDevice">No Device</string>
+    <string name="strDeviceSelected">Device selected</string>
+    <string name="strDeviceNotSelected">Device not selected</string>
+    <string name="strServiceNotBound">BLE service NOT bound</string>
+    <string name="strServiceNotInitialized">BLE service NOT initialized</string>
+    <string name="strServiceNotAvailable">BLE service NOT available</string>
+    <string name="strConnected">Connected</string>
+    <string name="strNotConnected">Not connected</string>
+    <string name="strConnecting">Connecting...</string>
+    <string name="strDisconnecting">Disconnecting...</string>
+    
+    <!-- Scan UI texts -->        
+    <string name="strScanDevice">Scan for BLE Devices</string>
+    <string name="strBTNotSupported">Bluetooth is not supported</string>
+    <string name="strBLENotSupported">BLE is not supported</string>    
+    <string name="strUnknownDeviceName">Unknown device name</string>    
+    <string name="strUnknownDeviceAddress">Unknown device address</string>    
+    <string name="strUnknownRSSI">Unknown RSSIs</string>    
+    
+    <!-- Services UI texts -->        
+    <string name="strDataTitle">Service data\u0020</string>  
+    <string name="strUnknownService">Unknown service</string>
+    <string name="strUnknownCharacteristic">Unknown characteristic</string>
+        
+    <!-- OLP425 UI texts -->        
+    <string name="strOLP425Specific">\u0020\u0020Supported by the OLP425 device family</string>
+    <string name="strTemperature">Temperature</string>
+    <string name="strRSSI">RSSI</string>
+    <string name="strBatteryLevel">Battery level</string>    
+    <string name="strAccelerometerRange">Accelerometer Range</string>
+    <string name="strAccX">ACC X\u0020</string>
+    <string name="strAccY">ACC Y\u0020</string>
+    <string name="strAccZ">ACC Z\u0020</string>
+    <string name="strAccM">ACC M\u0020</string>
+    <string name="strGreenLED">Green LED</string>
+    <string name="strRedLED">Red LED</string>    
+    <string name="strNoDataAvailable">No data available</string>   
+    
+    <!-- Chat UI texts -->        
+    <string name="strSendButton">Send</string>
+    <string name="strEnterChatText">Enter chat text here</string>
+    <string name="strNothingToSend">There is nothing to send</string>
+    <string name="strSerialPortServiceAvailable">\u0020\u0020Serial port service available</string>
+    <string name="strSerialPortServiceNotAvailable">\u0020\u0020Serial port service not available</string>
+    <string name="strSerialPortServiceNotSupported">\u0020\u0020Serial port service not supported for this device software version</string>
+
+    <string name="strMainAppSpecific">\u0020\u0020XYZ</string>
+
+</resources>
