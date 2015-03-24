@@ -238,6 +238,7 @@ public class MainAppFragment extends Fragment
         mAccM.setProgress(127);
         greenLED.setChecked(false);
         redLED.setChecked(false);
+        M = 0;
     }
 
     /** BLE service connection handler*/
