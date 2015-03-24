@@ -6,6 +6,7 @@ import com.mithings.bleservice.BLEService;
 import com.mithings.bleservice.GattAttributes;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.widget.VideoView;
 
 /** This fragment manages the OLP425 tab */
 public class MainAppFragment extends Fragment
@@ -56,16 +58,21 @@ public class MainAppFragment extends Fragment
     private TextView rssi;
     private TextView batteryLevel;
     private TextView accelerometerRange;
+    private TextView mTextField;
     private ProgressBar mAccX;
     private ProgressBar mAccY;
     private ProgressBar mAccZ;
     private ProgressBar mAccM;
-    private int M;
+    private int M, N;
     private int X0 = 0, Y0 = 0, Z0 = 0;
     private int X1 = 0, Y1 = 0, Z1 = 0;
+    private TextView mpercent;
+    private int mPercent = 0;
     private Switch greenLED;
     private Switch redLED;
     private Sensor sensor;
+    private int Max = 0;
+    private VideoView videoView;
 
     // An empty constructor is required by the system in certain situations ...
     public MainAppFragment() {}
@@ -165,12 +172,55 @@ public class MainAppFragment extends Fragment
         mAccM = (ProgressBar) v.findViewById(R.id.progressbar_acc_m);
         greenLED = (Switch) v.findViewById(R.id.greenled);
         redLED = (Switch) v.findViewById(R.id.redled);
+        mpercent = (TextView) v.findViewById(R.id.mPercent);
+        mTextField = (TextView) v.findViewById(R.id.textField);
 
         resetOLP425UI();
 
         // Set listeners for detecting user changes to the LED states, and update the corresponding BLE device LEDs
         greenLED.setOnCheckedChangeListener(new GreenLEDListener());
         redLED.setOnCheckedChangeListener(new RedLEDListener());
+
+        //final VideoView videoView = (VideoView) v.findViewById(R.id.videoView);
+        videoView = (VideoView) v.findViewById(R.id.videoView);
+        videoView.setVideoPath("http://rmcdn.2mdn.net/MotifFiles/html/1248596/android_1330378998288.mp4");
+        videoView.start();
+
+        new CountDownTimer(30000000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                //mTextField.setText("Seconds remaining: " + millisUntilFinished / 500);
+
+                //View v = inflater.inflate(R.layout.fragment_mainapp, container, false); if(D) Log.i(TAG, "onCreateView");
+                //final VideoView videoView = (VideoView) v.findViewById(R.id.videoView);
+                //videoView = (VideoView) v.findViewById(R.id.videoView);
+
+                if ((Math.abs(M) < 150) & (N != 0))
+                {
+                    N = 0;
+                    videoView.seekTo(10000);
+                }
+                else if ((Math.abs(M) > 150) & (Math.abs(M) < 200) & (N != 1))
+                {
+                    N = 1;
+                    videoView.seekTo(38000);
+                }
+                else if ((Math.abs(M) > 250) & (N != 2))
+                {
+                    N = 2;
+                    videoView.seekTo(75000);
+                }
+
+                mTextField.setText(String.valueOf(String.valueOf(Max)));
+                //Min = 0;
+                Max = 0;
+            }
+
+            public void onFinish() {
+                mTextField.setText("Done");
+            }
+
+        }.start();
 
         // Return fragment view to system
         return(v);
@@ -380,6 +430,16 @@ public class MainAppFragment extends Fragment
             M = Z1;
         }
         mAccM.setProgress(M);
+        mpercent.setText(String.valueOf(((float) M - 127f) / 1.27f));
+
+        //if (M < Min)
+        //{
+        //    Min = M;
+        //]
+        if (M > Max)
+        {
+            Max = M;
+        }
 
     }
 

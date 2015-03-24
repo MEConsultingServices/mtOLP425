@@ -23,6 +23,8 @@
     android:versionCode="2"
     android:versionName="1.1" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk
         android:minSdkVersion="18"
         android:targetSdkVersion="18" />
